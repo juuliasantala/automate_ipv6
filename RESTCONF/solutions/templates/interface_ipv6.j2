@@ -1,0 +1,35 @@
+{# /restconf/data/Cisco-IOS-XE-native:native/interface #}
+{
+    "Cisco-IOS-XE-native:interface": {
+        "GigabitEthernet": [
+            {% for interface in interfaces if interface.type == "GigabitEthernet" %}
+            {
+                "name": "{{ interface.number }}",
+                "description": "{{ interface.description }}",
+                "ipv6": {
+                    {% if interface.ipv6_prefix %}
+                    "address": {
+                        "prefix-list": [{% for prefix in interface.ipv6_prefix %}
+                            {
+                                "prefix":"{{ prefix }}"
+                            }{{ "," if not loop.last else "" }}{% endfor %}
+                        ]
+                    },{% endif %}
+                    {% if interface.nd_prefix %}
+                    "nd": {
+                        "Cisco-IOS-XE-nd:prefix": {
+                            "ipv6-prefix-list": [
+                                {
+                                "ipv6-prefix": "{{ interface.nd_prefix }}"
+                                }
+                            ]
+                        }
+                    },
+                    {% endif %}
+                    "enable": [null]
+                }
+            }{{ "," if not loop.last else "" }}
+            {% endfor %}
+        ]
+    }
+}

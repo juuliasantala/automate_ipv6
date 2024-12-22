@@ -1,0 +1,12 @@
+{# /restconf/data/Cisco-IOS-XE-native:native/ipv6/ #}
+{
+    "Cisco-IOS-XE-native:ipv6": {
+        "router": {
+            "ospf": [{% for id in ospfv3 %}
+                {
+                    "id": {{ id }}
+                }{{ "," if not loop.last else "" }}{% endfor %}
+            ]
+        }
+    }
+}
