@@ -94,7 +94,7 @@ def view_interface_ipv6(device_ip:str, username:str, password:str, port:int=830,
             print("- IPv6 enabled!")
             print(f'  - Configured address: {interface.get("ipv6").get("address")}')
             print(f'  - Configured neighbor discovery: {interface.get("ipv6").get("nd")}')
-            print(f'  - Configured OSPFv3: {interface.get("ipv6").get("Cisco-IOS-XE-ospfv3:ospf")}')
+            print(f'  - Configured OSPFv3: {interface.get("ipv6").get("ospf")}')
             print(f"  - Actual address: {', '.join(ipv6_addresses) if ipv6_addresses else None}")
             
         else:
