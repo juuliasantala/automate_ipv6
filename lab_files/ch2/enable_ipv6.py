@@ -1,6 +1,6 @@
 from ncclient import manager
 
-def enable_ipv6(device_ip, username, password, port=830, verify=False)->None:
+def enable_ipv6(device_ip, username, password, port=830, verify=False):
 
     print(f"\nConnecting to device {device_ip}...", end=" ")
 
@@ -27,21 +27,14 @@ def enable_ipv6(device_ip, username, password, port=830, verify=False)->None:
         </config>
     """
 
-    try:
-        with manager.connect(**device, device_params={"name":"iosxe"},timeout=10) as connection:
-            print("success!")
-            response = connection.edit_config(target="running", config=payload)
-            print(response)
-
-    except Exception as err:
-        print("failed!")
-        print(err)
-        return 1
+    with manager.connect(**device, device_params={"name":"iosxe"},timeout=10) as connection:
+        print("success!")
+        response = connection.edit_config(target="running", config=payload)
+        print(response)
 
 if __name__ == "__main__":
     devices = [
         "198.18.133.101",
-        "198.18.7.2",
         "198.18.11.2",
         "198.18.12.2"
     ]
