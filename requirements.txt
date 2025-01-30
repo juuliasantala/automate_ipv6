@@ -1,11 +1,7 @@
 genie==24.11
 Jinja2==3.1.5
 ncclient==0.6.16
-pyang==2.6.1
 pyats==24.11
 PyYAML==6.0.2
 requests==2.32.3
-requests-toolbelt==1.0.0
-rest.connector==24.11
 xmltodict==0.14.2
-yamllint==1.35.1
