@@ -85,7 +85,7 @@ def view_interface_ipv6(device_ip:str, username:str, password:str, port:int=830,
     
     for interface in interfaces_config:
         print(f"\nGigabitEthernet {interface['name']} (Description: '{interface.get('description')}')")
-        interface_oper = oper_data[f'GigabitEthernet{interface['name']}']
+        interface_oper = oper_data[f"GigabitEthernet{interface['name']}"]
 
         if "ipv6" in interface:
             ipv6_addresses = interface_oper['ipv6']
