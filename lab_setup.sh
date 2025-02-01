@@ -12,7 +12,7 @@ echo "\nInstalling requirements"
 
 cd /home/developer/lab-src
 pip install --upgrade pip
-pip install -r requirements.txt
+pip install -r requirements.txt --no-warn-script-location
 
 echo "********************"
 
