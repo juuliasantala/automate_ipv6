@@ -1,0 +1,30 @@
+---
+
+R2:
+  mgmt: "198.18.7.2"
+  interfaces:
+    - type: "GigabitEthernet"
+      number: "4"
+      ospfv3:
+        process_id: "1"
+        process_area: "0"
+    - type: "GigabitEthernet"
+      number: "5"
+      ospfv3:
+        process_id: "1"
+        process_area: "0"
+    - type: "GigabitEthernet"
+      number: "6"
+      ospfv3:
+        process_id: "1"
+        process_area: "0"
+
+R3:
+  mgmt: "198.18.11.2"
+  interfaces:
+    # Add here R3 configuration
+
+R4:
+  mgmt: "198.18.12.2"
+  interfaces:
+    # Add here R4 configuration

@@ -21,6 +21,7 @@ echo "\nCreating lab directory"
 mkdir /home/developer/IPv6_lab
 
 cp -r /home/developer/lab-src/lab_files/ch* /home/developer/IPv6_lab
+cp -r /home/developer/lab-src/lab_files/b* /home/developer/IPv6_lab
 
 echo "********************"
 
