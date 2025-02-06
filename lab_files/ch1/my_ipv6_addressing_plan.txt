@@ -3,13 +3,13 @@ This file is just a note, and will not be used in the automation, so feel free t
 
 Web network:
 - Prefix: <your prefix>
-- Static address for R1 Gi2:
+- Static address for R1 Gi2: <your address>
 
 Helsinki branch network:
 - Prefix: <your prefix>
-- Static address for R3 Gi5:
+- Static address for R3 Gi5: <your address>
 
 Tokyo branch network:
 - Prefix: <your prefix>
-- Static address for R3 Gi5:
+- Static address for R4 Gi5: <your address>
 
