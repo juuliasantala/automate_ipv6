@@ -1,3 +1,4 @@
+import sys
 from pyats import aetest, topology
 import yaml
 
@@ -36,4 +37,7 @@ if __name__ == "__main__":
 
     my_testbed = topology.loader.load("testbed.yaml")
 
-    aetest.main(testbed=my_testbed, destinations_file="ping_destinations.yaml")
+    result = aetest.main(testbed=my_testbed, destinations_file="ping_destinations.yaml")
+    if str(result) != "passed":
+        sys.exit(1)
+

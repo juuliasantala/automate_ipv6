@@ -1,3 +1,4 @@
+import sys
 import ipaddress
 from pyats import aetest
 import yaml
@@ -49,4 +50,6 @@ class InterfaceConfigAnalysis(aetest.Testcase):
 
 if __name__ == "__main__":
 
-    aetest.main(config_file="sot.yaml")
+    result = aetest.main(config_file="sot.yaml")
+    if str(result) != "passed":
+        sys.exit(1)
