@@ -91,7 +91,7 @@ if __name__ == "__main__":
 
     # TODO: Change the address and ND below to match what you marked in your address plan for
     # R1 GigabitEthernet 2
-    R1_configuration = {"address": "2001:420:4021:1a47::1/64", "nd": "2001:420:4021:1a47::/64"}
+    R1_configuration = {"address": "YOUR INTERFACE ADDRESS", "nd": "OUR ND PREFIX"}
 
     configure_ipv6_on_intf(R1, credentials["username"], credentials["password"],
                            R1_configuration["address"], R1_configuration["nd"])
